@@ -18,10 +18,11 @@ background-repeat: no-repeat;
 background-size: cover;
 margin: 0px;
 height: 100%;
+width: 100%;
 
 }
 
-
+/**
 .xsmall {
   font-size: 40px;
   line-height:45px;
@@ -46,3 +47,4 @@ height: 100%;
   font-size: 800px;
   line-height:250px;
 }
+**/
