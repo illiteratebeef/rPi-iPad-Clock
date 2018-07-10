@@ -1,9 +1,9 @@
 Crontab -e
 
 
-1 1 * * * cd /home/pi/Images && curl -s 'https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss' | awk '/enclosure/{system("wget -nc "$2);exit}' FS=\"
+0 12 * * * cd /home/pi/Images && curl -s 'https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss' | awk '/enclosure/{system("wget -nc "$2);exit}' FS=\"
 0 * * * *  cp `ls -d -1 /home/pi/Images/*.* | shuf -n 1` /home/pi/MagicMirror/css/image.jpg && pm2 restart mm
 15 * * * *  cp `ls -d -1 /home/pi/Images/*.* | shuf -n 1` /home/pi/MagicMirror/css/image.jpg && pm2 restart mm
 30 * * * *  cp `ls -d -1 /home/pi/Images/*.* | shuf -n 1` /home/pi/MagicMirror/css/image.jpg && pm2 restart mm
 45 * * * *  cp `ls -d -1 /home/pi/Images/*.* | shuf -n 1` /home/pi/MagicMirror/css/image.jpg && pm2 restart mm
-1 23 * * *  sudo shutdown now
+0 23 * * *  sudo shutdown now
